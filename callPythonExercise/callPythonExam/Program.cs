@@ -12,6 +12,7 @@ namespace callPythonExample
 		static void Main(string[] args)
 		{
 			string getAppPath = System.IO.Directory.GetCurrentDirectory();
+			//string Lpath = getAppPath.Replace(@"bin\Debug", string.Empty);
 			int index1;
 			index1 = getAppPath.IndexOf("callPythonExam");
 			int pathLength = getAppPath.Length;
@@ -25,6 +26,7 @@ namespace callPythonExample
 				Lpath = getAppPath;
 			}
 			string filePath = Lpath + "calc\\calc.py";
+			//string filePath = Lpath + "calc.py";
 
 			var engine = Python.CreateEngine();
 

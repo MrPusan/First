@@ -59,16 +59,26 @@ namespace WindowsFormsApp1
 
 		private void ExeFromFile_Click(object sender, EventArgs e)
 		{
-			string path = Application.ExecutablePath;
+			/*string path = Application.ExecutablePath;
 			int index1 = path.IndexOf("bin");
 			int index2 = path.Length;
-			string Lpath = path.Remove(index1, index2 - index1);
+			string Lpath = "";
+			if (index1 >= 0)
+			{
+				Lpath = path.Remove(index1, index2 - index1);
+			}
+			else
+			{
+				Lpath = path;
+			}*/
+			
 			string fileName = "test.py";
-			string fullPath = Lpath + fileName;
+
+			//string fullPath = Lpath + fileName;
 			try
 			{
-				pythonNet.CompileSourceAndExecute(fullPath, 1);
-
+				//pythonNet.CompileSourceAndExecute(fullPath, 1);
+				pythonNet.CompileSourceAndExecute(fileName, 1);
 			}
 			catch (Exception ex)
 			{
